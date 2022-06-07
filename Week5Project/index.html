@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script
+      src="https://kit.fontawesome.com/913dbdd293.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card col-6">
+        <div class="card-body col-12">
+          <form id="new-city">
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Enter a City"
+              autofocus
+              class="col-6"
+            />
+            <div class="col-3" id="submit">
+              <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+          </form>
+          <form id="search-city">
+            <div class="col-5" id="search">
+              <input
+                type="submit"
+                value="Current Location"
+                class="btn btn-primary"
+              />
+            </div>
+          </form>
+          <h2>City?</h2>
+          <h4>
+            <span id="date-time"></span>
+          </h4>
+          <p id="description">
+            <strong> </strong>
+          </p>
+          <h1>??</h1>
+          <p id="paragraph">
+            <span id="celcius"> <a href="#">°c</a></span>
+            <span id="dash">|</span>
+            <span id="farenhiet"> <a href="#">°f</a></span>
+          </p>
+
+          <div class="row degree">
+            <div class="col-4" id="humid">Humidity</div>
+            <div class="col-4" id="press">Pressure</div>
+            <div class="col-4" id="breeze">Wind</div>
+            <img src="images/image.png" />
+          </div>
+          <div class="row days">
+            <div class="col">
+              Sun <br /><i class="fas fa-cloud-showers-heavy cold"></i>
+              <div class="col">24°c</div>
+            </div>
+            <div class="col">
+              Mon <br /><i class="fas fa-cloud-sun-rain warm"></i>
+              <div class="col">28°c</div>
+            </div>
+            <div class="col">
+              Tues <br /><i class="fas fa-cloud-rain warm"></i>
+              <div class="col">25°c</div>
+            </div>
+            <div class="col">
+              Wed <br /><i class="fas fa-cloud-showers-heavy cold"></i>
+              <div class="col">24°c</div>
+            </div>
+            <div class="col">
+              Thurs <br /><i class="fas fa-cloud-sun-rain warm"></i>
+              <div class="col">28°c</div>
+            </div>
+            <div class="col">
+              Fri <br /><i class="fas fa-sun hot"></i>
+              <div class="col">32°c</div>
+            </div>
+            <div class="col">
+              Sat <br /><i class="fas fa-cloud-meatball cold"></i>
+              <div class="col">24°c</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
