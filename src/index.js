@@ -74,7 +74,6 @@ function getCity() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     function getCurrentLocation(response) {
       let yourLocation = document.querySelector("#search");
-      yourLocation.addEventListener("click", getCurrentLocation);
       h2 = document.querySelector("h2");
       h2.innerHTML = response.data.name;
       let localTemp = Math.round(response.data.main.temp);
@@ -112,7 +111,7 @@ function getCity() {
     }
     axios.get(`${apiUrl}&${apiKey}`).then(getCurrentLocation);
   }
-  navigator.geolocation.getCurrentPosition(myLocation);
+  navigator.geolocation.getCurrentPosition(getCity);
 }
 let locateCity = document.querySelector("#search-city");
 locateCity.addEventListener("click", getCity);
