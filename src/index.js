@@ -111,7 +111,7 @@ function getCity() {
     }
     axios.get(`${apiUrl}&${apiKey}`).then(getCurrentLocation);
   }
-  navigator.geolocation.getCurrentPosition(getCity);
+  navigator.geolocation.getCurrentPosition(myLocation);
 }
 let locateCity = document.querySelector("#search-city");
 locateCity.addEventListener("click", getCity);
