@@ -67,9 +67,9 @@ let city = document.querySelector("#new-city");
 city.addEventListener("submit", changeCity);
 
 function getCity() {
-  function myLocation(response) {
-    let latitude = response.coords.latitude;
-    let longitude = response.coords.longitude;
+  function myLocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
     let apiKey = "71d19b8996a6f036f4262dd935db1604";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     function getCurrentLocation(response) {
